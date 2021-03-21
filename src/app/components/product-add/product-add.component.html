@@ -1,20 +1,70 @@
 <div class="content">
-  <div class="col-md-12">
+  <div class="col-md-9">
     <div class="card">
       <div class="card-header">
         <h5 class="title">Ürün Ekle</h5>
         <div class="card-body">
           <form [formGroup]="productAddForm">
-            <div class="form-group">
-              <input
-                type="text"
-                id="productName"
-                formControlName="productName"
-                class="form-control"
-                placeholder="Ürün adı"
-              />
+            <div class="mb-3">
+              <label for="productName"><strong>Ürün Adı</strong></label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="productName"
+                  formControlName="productName"
+                  class="form-control"
+                  placeholder="Ürün adı"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="categoryId"><strong>Kategori</strong></label>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="categoryId"
+                  formControlName="categoryId"
+                  class="form-control"
+                  placeholder="Kategori "
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="unitsInStock"><strong>Stok Adedi</strong></label>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="unitsInStock"
+                  formControlName="unitsInStock"
+                  class="form-control"
+                  placeholder="Stok adedi "
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="unitPrice"><strong>Birim Fiyatı</strong> </label>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="unitPrice"
+                  formControlName="unitPrice"
+                  class="form-control"
+                  placeholder="Birim fiyatı "
+                />
+              </div>
             </div>
           </form>
+        </div>
+        <div class="card-footer">
+          <button
+            class="btn btn-fill btn-primary"
+            style="float: right"
+            (click)="add()"
+          >
+            Ekle
+          </button>
         </div>
       </div>
     </div>
